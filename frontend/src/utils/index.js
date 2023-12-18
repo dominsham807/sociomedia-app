@@ -33,7 +33,7 @@ export const handleFileUpload = async(uploadFile) => {
 
     try{
         const response = await axios.post(
-            `https://api.cloudinary.com/v1_1/djzogdk0i/image/upload/`,
+            `${process.env.CLOUDINARY_URI}/image/upload/`,
             formData
         )
         console.log(response)
